@@ -2,9 +2,15 @@
 Franca Lab Work.
 Share any information here:
 
+HOWTO GITHUB
+=============
 Use this URL (not HTTP) when cloning so that SSH is used as your protocol:
 git clone git@github.com:francalab/francalab-misc.git
 This gives you write access using the SSH key that exists in the virtual machine.
+
+HOWTO VM IMAGE
+===============
+The password is franca
 
 -----------------------------------------------------------------------------------
 Project: Generate WebIDL from Franca?
@@ -16,6 +22,12 @@ Who is working on this?  (put your name here)
 
 * Gianpaolo will be here
 * Gunnar
+
+Franca types:
+Array
+
+
+
 
 -----------------------------------------------------------------------------------
 Project: Create WebIDL code generator
