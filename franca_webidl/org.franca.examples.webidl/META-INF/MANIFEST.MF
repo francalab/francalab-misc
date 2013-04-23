@@ -15,6 +15,10 @@ Require-Bundle: org.eclipse.core.runtime,
  org.franca.deploymodel.dsl;bundle-version="0.7.7",
  org.eclipse.xtext;bundle-version="2.3.1",
  org.apache.log4j;bundle-version="1.2.15",
- org.waml.w3c.webidl;visibility:=reexport
+ org.waml.w3c.webidl;visibility:=reexport,
+ org.eclipse.xtext.junit4;bundle-version="2.4.0",
+ org.franca.core.dsl.tests.base;bundle-version="0.8.7"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
+Import-Package: org.eclipse.xtext.junit4,
+ org.franca.core.dsl
