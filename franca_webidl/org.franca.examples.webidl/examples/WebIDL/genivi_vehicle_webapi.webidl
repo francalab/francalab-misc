@@ -1,11 +1,14 @@
-//
-// (C) 2013 GENIVI Alliance
-// All Rights Reserved
-// (open source licensing not specified at this time)
-//
-// From 2013-04-23
-// https://collab.genivi.org/wiki/display/genivi/Web+API+for+Vehicle+Data#WebAPIforVehicleData-6.FullWebIDL
-	
+
+
+// dummy definitions for avoiding syntax errors
+interface Event { };
+interface Error { };
+interface EventTarget { };
+interface genivi { };
+
+
+// this part has been copied from https://collab.genivi.org/wiki/display/genivi/Web+API+for+Vehicle+Data#WebAPIforVehicleData-6.FullWebIDL
+
 module vehicle {
     typedef DOMString VehicleEventType;
      
@@ -14,7 +17,7 @@ module vehicle {
         const short NOT_AVAILABLE = 2;
         const short UNKNOWN = 0;
     };
-     
+
     [NoInterfaceObject]
     interface VehicleEvent : Event {
     };
@@ -47,53 +50,53 @@ module vehicle {
     };
      
     interface VehicleInfoEvent : VehicleEvent {
-        const VehicleEventType VEHICLEINFO = "vehicleinfo";
-        const VehicleEventType VEHICLEINFO_WMI = "vehicleinfo_wmi";
-        const VehicleEventType VEHICLEINFO_VIN = "vehicleinfo_vin";
-        const VehicleEventType VEHICLEINFO_VEHICLETYPE = "vehicleinfo_vehicletype";
-        const VehicleEventType VEHICLEINFO_DOORTYPE = "vehicleinfo_doortype";
-        const VehicleEventType VEHICLEINFO_DOORTYPE_1STROW = "vehicleinfo_doortype_1strow";
-        const VehicleEventType VEHICLEINFO_DOORTYPE_2NDROW = "vehicleinfo_doortype_2ndrow";
-        const VehicleEventType VEHICLEINFO_DOORTYPE_3RDROW = "vehicleinfo_doortype_3rdrow";
-        const VehicleEventType VEHICLEINFO_FUELTYPE = "vehicleinfo_fueltype";
-        const VehicleEventType VEHICLEINFO_TRANSMISSIONGEARTYPE = "vehicleinfo_transmissiongeartype";
-        const VehicleEventType VEHICLEINFO_WHEELINFO = "vehicleinfo_wheelinfo";
-        const VehicleEventType VEHICLEINFO_WHEELINFO_RADIUS = "vehicleinfo_wheelinfo_radius";
-        const VehicleEventType VEHICLEINFO_WHEELINFO_TRACK = "vehicleinfo_wheelinfo_track";
+        const VehicleEventType VEHICLE_INFO = "vehicle_info";
+        const VehicleEventType VEHICLE_INFO_WMI = "vehicle_info_wmi";
+        const VehicleEventType VEHICLE_INFO_VIN = "vehicle_info_vin";
+        const VehicleEventType VEHICLE_INFO_VEHICLE_TYPE = "vehicle_info_vehicle_type";
+        const VehicleEventType VEHICLE_INFO_DOOR_TYPE = "vehicle_info_door_type";
+        const VehicleEventType VEHICLE_INFO_DOOR_TYPE_1ST_ROW = "vehicle_info_door_type_1st_row";
+        const VehicleEventType VEHICLE_INFO_DOOR_TYPE_2ND_ROW = "vehicle_info_door_type_2nd_row";
+        const VehicleEventType VEHICLE_INFO_DOOR_TYPE_3RD_ROW = "vehicle_info_door_type_3rd_row";
+        const VehicleEventType VEHICLE_INFO_FUEL_TYPE = "vehicle_info_fuel_type";
+        const VehicleEventType VEHICLE_INFO_TRANSMISSION_GEAR_TYPE = "vehicle_info_transmission_gear_type";
+        const VehicleEventType VEHICLE_INFO_WHEEL_INFO = "vehicle_info_wheel_info";
+        const VehicleEventType VEHICLE_INFO_WHEEL_INFO_RADIUS = "vehicle_info_wheel_info_radius";
+        const VehicleEventType VEHICLE_INFO_WHEEL_INFO_TRACK = "vehicle_info_wheel_info_track";
          
-        const unsigned short VEHICLETYPE_SEDAN = 1;
-        const unsigned short VEHICLETYPE_COUPE = 2;
-        const unsigned short VEHICLETYPE_CABRIOLET = 3;
-        const unsigned short VEHICLETYPE_ROADSTER = 4;
-        const unsigned short VEHICLETYPE_SUV = 5;
-        const unsigned short VEHICLETYPE_TRUCK = 6;
+        const unsigned short VEHICLE_TYPE_SEDAN = 1;
+        const unsigned short VEHICLE_TYPE_COUPE = 2;
+        const unsigned short VEHICLE_TYPE_CABRIOLET = 3;
+        const unsigned short VEHICLE_TYPE_ROADSTER = 4;
+        const unsigned short VEHICLE_TYPE_SUV = 5;
+        const unsigned short VEHICLE_TYPE_TRUCK = 6;
  
-        const octet FUELTYPE_GASOLINE = 0x01;
-        const octet FUELTYPE_METHANOL= 0x02;
-        const octet FUELTYPE_ETHANOL = 0x03;
-        const octet FUELTYPE_DIESEL= 0x04;
-        const octet FUELTYPE_LPG = 0x05;
-        const octet FUELTYPE_CNG = 0x06;
-        const octet FUELTYPE_PROPANE = 0x07;
-        const octet FUELTYPE_ELECTRIC = 0x08;
-        const octet FUELTYPE_BIFUELRUNNINGGASOLINE = 0x09;
-        const octet FUELTYPE_BIFUELRUNNINGMETHANOL = 0x0A;
-        const octet FUELTYPE_BIFUELRUNNINGETHANOL = 0x0B;
-        const octet FUELTYPE_BIFUELRUNNINGLPG = 0x0C;
-        const octet FUELTYPE_BIFUELRUNNINGCNG = 0x0D;
-        const octet FUELTYPE_BIFUELRUNNINGPROP = 0x0E;
-        const octet FUELTYPE_BIFUELRUNNINGELECTRICITY = 0x0F;
-        const octet FUELTYPE_BIFUELMIXEDGASELECTRIC= 0x10;
-        const octet FUELTYPE_HYBRIDGASOLINE = 0x11;
-        const octet FUELTYPE_HYBRIDETHANOL = 0x12;
-        const octet FUELTYPE_HYBRIDDIESEL = 0x13;
-        const octet FUELTYPE_HYBRIDELECTRIC = 0x14;
-        const octet FUELTYPE_HYBRIDMIXEDFUEL = 0x15;
-        const octet FUELTYPE_HYBRIDREGENERATIVE = 0x16;
- 
-        const unsigned short TRANSMISSIONGEARTYPE_AUTO = 1;
-        const unsigned short TRANSMISSIONGEARTYPE_MANUAL = 2;
-        const unsigned short TRANSMISSIONGEARTYPE_CVT = 3;
+        const octet FUEL_TYPE_GASOLINE = 0x01;
+        const octet FUEL_TYPE_METHANOL= 0x02;
+        const octet FUEL_TYPE_ETHANOL = 0x03;
+        const octet FUEL_TYPE_DIESEL= 0x04;
+        const octet FUEL_TYPE_LPG = 0x05;
+        const octet FUEL_TYPE_CNG = 0x06;
+        const octet FUEL_TYPE_PROPANE = 0x07;
+        const octet FUEL_TYPE_ELECTRIC = 0x08;
+        const octet FUEL_TYPE_BIFUEL_RUNNING_GASOLINE = 0x09;
+        const octet FUEL_TYPE_BIFUEL_RUNNING_METHANOL = 0x0A;
+        const octet FUEL_TYPE_BIFUEL_RUNNING_ETHANOL = 0x0B;
+        const octet FUEL_TYPE_BIFUEL_RUNNING_LPG = 0x0C;
+        const octet FUEL_TYPE_BIFUEL_RUNNING_CNG = 0x0D;
+        const octet FUEL_TYPE_BIFUEL_RUNNING_PROP = 0x0E;
+        const octet FUEL_TYPE_BIFUEL_RUNNING_ELECTRICITY = 0x0F;
+        const octet FUEL_TYPE_BIFUEL_MIXED_GAS_ELECTRIC= 0x10;
+        const octet FUEL_TYPE_HYBRID_GASOLINE = 0x11;
+        const octet FUEL_TYPE_HYBRID_ETHANOL = 0x12;
+        const octet FUEL_TYPE_HYBRID_DIESEL = 0x13;
+        const octet FUEL_TYPE_HYBRID_ELECTRIC = 0x14;
+        const octet FUEL_TYPE_HYBRID_MIXED_FUEL = 0x15;
+        const octet FUEL_TYPE_HYBRID_REGENERATIVE = 0x16;
+         
+        const unsigned short TRANSMISSION_GEAR_TYPE_AUTO = 1;
+        const unsigned short TRANSMISSION_GEAR_TYPE_MANUAL = 2;
+        const unsigned short TRANSMISSION_GEAR_TYPE_CVT = 3;
  
         readonly attribute VehicleEventType type;
         readonly attribute DOMString wmi;
@@ -107,92 +110,92 @@ module vehicle {
         readonly attribute double? wheelInfoRadius;
         readonly attribute double? wheelInfoTrack;
     };
- 
+     
     interface RunningStatusEvent : VehicleEvent {
-        const VehicleEventType RUNNINGSTATUS = "runningstatus";
-        const VehicleEventType RUNNINGSTATUS_VEHICLEPOWERMODE = "runningstatus_vehiclepowermode";
-        const VehicleEventType RUNNINGSTATUS_SPEEDOMETER = "runningstatus_speedometer";
-        const VehicleEventType RUNNINGSTATUS_ENGINESPEED = "runningstatus_enginespeed";
-        const VehicleEventType RUNNINGSTATUS_TRIPMETER = "runningstatus_tripmeter";
-        const VehicleEventType RUNNINGSTATUS_TRIPMETER_1 = "runningstatus_tripmeter_1";
-        const VehicleEventType RUNNINGSTATUS_TRIPMETER_2 = "runningstatus_tripmeter_2";
-        const VehicleEventType RUNNINGSTATUS_TRIPMETER_1_MILEAGE = "runningstatus_tripmeter_1_mileage";
-        const VehicleEventType RUNNINGSTATUS_TRIPMETER_2_MILEAGE = "runningstatus_tripmeter_2_mileage";
-        const VehicleEventType RUNNINGSTATUS_TRIPMETER_1_AVERAGESPEED = "runningstatus_tripmeter_1_averagespeed";
-        const VehicleEventType RUNNINGSTATUS_TRIPMETER_2_AVERAGESPEED = "runningstatus_tripmeter_2_averagespeed";
-        const VehicleEventType RUNNINGSTATUS_TRIPMETER_1_FUELCONSUMPTION = "runningstatus_tripmeter_1_fuelconsumption";
-        const VehicleEventType RUNNINGSTATUS_TRIPMETER_2_FUELCONSUMPTION = "runningstatus_tripmeter_2_fuelconsumption";
-        const VehicleEventType RUNNINGSTATUS_TRANSMISSIONGEARSTATUS = "runningstatus_transmissiongearstatus";
-        const VehicleEventType RUNNINGSTATUS_CRUISECONTROL = "runningstatus_cruisecontrol";
-        const VehicleEventType RUNNINGSTATUS_CRUISECONTROL_STATUS = "runningstatus_cruisecontrol_status";
-        const VehicleEventType RUNNINGSTATUS_CRUISECONTROL_SPEED = "runningstatus_cruisecontrol_speed";
-        const VehicleEventType RUNNINGSTATUS_WHEELBRAKE = "runningstatus_wheelbrake";
-        const VehicleEventType RUNNINGSTATUS_LIGHTSSTATUS = "runningstatus_lightsstatus";
-        const VehicleEventType RUNNINGSTATUS_LIGHTSSTATUS_HEAD = "runningstatus_lightsstatus_head";
-        const VehicleEventType RUNNINGSTATUS_LIGHTSSTATUS_HIGHBEAM = "runningstatus_lightsstatus_highbeam";
-        const VehicleEventType RUNNINGSTATUS_LIGHTSSTATUS_TURNLEFT = "runningstatus_lightsstatus_turnleft";
-        const VehicleEventType RUNNINGSTATUS_LIGHTSSTATUS_TURNRIGHT = "runningstatus_lightsstatus_turnright";
-        const VehicleEventType RUNNINGSTATUS_LIGHTSSTATUS_BRAKE = "runningstatus_lightsstatus_brake";
-        const VehicleEventType RUNNINGSTATUS_LIGHTSSTATUS_FOGFRONT = "runningstatus_lightsstatus_fogfront";
-        const VehicleEventType RUNNINGSTATUS_LIGHTSSTATUS_FOGREAR = "runningstatus_lightsstatus_fogrear";
-        const VehicleEventType RUNNINGSTATUS_LIGHTSSTATUS_HAZARD = "runningstatus_lightsstatus_hazard";
-        const VehicleEventType RUNNINGSTATUS_LIGHTSSTATUS_PARKING = "runningstatus_lightsstatus_parking";
-        const VehicleEventType RUNNINGSTATUS_INTERIORLIGHTSSTATUS = "runningstatus_interiorlightsstatus";
-        const VehicleEventType RUNNINGSTATUS_INTERIORLIGHTSSTATUS_DRIVER = "runningstatus_interiorlightsstatus_driver";
-        const VehicleEventType RUNNINGSTATUS_INTERIORLIGHTSSTATUS_PASSENGER = "runningstatus_interiorlightsstatus_passenger";
-        const VehicleEventType RUNNINGSTATUS_INTERIORLIGHTSSTATUS_CENTER = "runningstatus_interiorlightsstatus_center";
-        const VehicleEventType RUNNINGSTATUS_AUTOMATICHEADLIGHTS = "runningstatus_automaticheadlights";
-        const VehicleEventType RUNNINGSTATUS_DYNAMICHIGHBEAM = "runningstatus_dynamichighbeam";
-        const VehicleEventType RUNNINGSTATUS_HORN = "runningstatus_horn";
-        const VehicleEventType RUNNINGSTATUS_CHIME = "runningstatus_chime";
-        const VehicleEventType RUNNINGSTATUS_FUEL = "runningstatus_fuel";
-        const VehicleEventType RUNNINGSTATUS_ESTIMATEDRANGE = "runningstatus_estimatedrange";
-        const VehicleEventType RUNNINGSTATUS_ENGINEOIL = "runningstatus_engineoil";
-        const VehicleEventType RUNNINGSTATUS_ENGINEOIL_REMAINING = "runningstatus_engineoil_remaining";
-        const VehicleEventType RUNNINGSTATUS_ENGINEOIL_CHANGE = "runningstatus_engineoil_change";
-        const VehicleEventType RUNNINGSTATUS_ENGINEOIL_TEMP = "runningstatus_engineoil_temp";
-        const VehicleEventType RUNNINGSTATUS_ENGINECOOLANT = "runningstatus_enginecoolant";
-        const VehicleEventType RUNNINGSTATUS_ENGINECOOLANT_LEVEL = "runningstatus_enginecoolant_level";
-        const VehicleEventType RUNNINGSTATUS_ENGINECOOLANT_TEMP = "runningstatus_enginecoolant_temp";
-        const VehicleEventType RUNNINGSTATUS_STEERINGWHEELANGLE = "runningstatus_steeringwheelangle";
- 
-        const unsigned short VEHICLEPOWERMODE_OFF = 1;
-        const unsigned short VEHICLEPOWERMODE_ACC = 2;
-        const unsigned short VEHICLEPOWERMODE_RUN = 3;
-        const unsigned short VEHICLEPOWERMODE_IGNITION = 4;
- 
-        const unsigned short TRANSMISSIONGEARSTATUS_NEUTRAL = 0;
-        const unsigned short TRANSMISSIONGEARSTATUS_MANUAL1 = 1;
-        const unsigned short TRANSMISSIONGEARSTATUS_MANUAL2 = 2;
-        const unsigned short TRANSMISSIONGEARSTATUS_MANUAL3 = 3;
-        const unsigned short TRANSMISSIONGEARSTATUS_MANUAL4 = 4;
-        const unsigned short TRANSMISSIONGEARSTATUS_MANUAL5 = 5;
-        const unsigned short TRANSMISSIONGEARSTATUS_MANUAL6 = 6;
-        const unsigned short TRANSMISSIONGEARSTATUS_MANUAL7 = 7;
-        const unsigned short TRANSMISSIONGEARSTATUS_MANUAL8 = 8;
-        const unsigned short TRANSMISSIONGEARSTATUS_MANUAL9 = 9;
-        const unsigned short TRANSMISSIONGEARSTATUS_MANUAL10 = 10;
-        const unsigned short TRANSMISSIONGEARSTATUS_AUTO1 = 11;
-        const unsigned short TRANSMISSIONGEARSTATUS_AUTO2 = 12;
-        const unsigned short TRANSMISSIONGEARSTATUS_AUTO3 = 13;
-        const unsigned short TRANSMISSIONGEARSTATUS_AUTO4 = 14;
-        const unsigned short TRANSMISSIONGEARSTATUS_AUTO5 = 15;
-        const unsigned short TRANSMISSIONGEARSTATUS_AUTO6 = 16;
-        const unsigned short TRANSMISSIONGEARSTATUS_AUTO7 = 17;
-        const unsigned short TRANSMISSIONGEARSTATUS_AUTO8 = 18;
-        const unsigned short TRANSMISSIONGEARSTATUS_AUTO9 = 19;
-        const unsigned short TRANSMISSIONGEARSTATUS_AUTO10 = 20;
-        const unsigned short TRANSMISSIONGEARSTATUS_DRIVE = 32;
-        const unsigned short TRANSMISSIONGEARSTATUS_PARKING = 64;
-        const unsigned short TRANSMISSIONGEARSTATUS_REVERSE = 128;
- 
-        const unsigned short WHEELBRAKE_IDLE = 1;
-        const unsigned short WHEELBRAKE_ENGAGED = 2;
-        const unsigned short WHEELBRAKE_MALFUNCTION = 3;
- 
-        const unsigned short ENGINECOOLANTLEVEL_NORMAL = 0;
-        const unsigned short ENGINECOOLANTLEVEL_LOW = 1;
- 
+        const VehicleEventType RUNNING_STATUS = "running_status";
+        const VehicleEventType RUNNING_STATUS_VEHICLE_POWER_MODE = "running_status_vehicle_power_mode";
+        const VehicleEventType RUNNING_STATUS_SPEEDOMETER = "running_status_speedometer";
+        const VehicleEventType RUNNING_STATUS_ENGINE_SPEED = "running_status_engine_speed";
+        const VehicleEventType RUNNING_STATUS_TRIP_METER = "running_status_trip_meter";
+        const VehicleEventType RUNNING_STATUS_TRIP_METER_1 = "running_status_trip_meter_1";
+        const VehicleEventType RUNNING_STATUS_TRIP_METER_2 = "running_status_trip_meter_2";
+        const VehicleEventType RUNNING_STATUS_TRIP_METER_1_MILEAGE = "running_status_trip_meter_1_mileage";
+        const VehicleEventType RUNNING_STATUS_TRIP_METER_2_MILEAGE = "running_status_trip_meter_2_mileage";
+        const VehicleEventType RUNNING_STATUS_TRIP_METER_1_AVERAGE_SPEED = "running_status_trip_meter_1_average_speed";
+        const VehicleEventType RUNNING_STATUS_TRIP_METER_2_AVERAGE_SPEED = "running_status_trip_meter_2_average_speed";
+        const VehicleEventType RUNNING_STATUS_TRIP_METER_1_FUEL_CONSUMPTION = "running_status_trip_meter_1_fuel_consumption";
+        const VehicleEventType RUNNING_STATUS_TRIP_METER_2_FUEL_CONSUMPTION = "running_status_trip_meter_2_fuel_consumption";
+        const VehicleEventType RUNNING_STATUS_TRANSMISSION_GEAR_STATUS = "running_status_transmission_gear_status";
+        const VehicleEventType RUNNING_STATUS_CRUISE_CONTROL = "running_status_cruise_control";
+        const VehicleEventType RUNNING_STATUS_CRUISE_CONTROL_STATUS = "running_status_cruise_control_status";
+        const VehicleEventType RUNNING_STATUS_CRUISE_CONTROL_SPEED = "running_status_cruise_control_speed";
+        const VehicleEventType RUNNING_STATUS_WHEEL_BRAKE = "running_status_wheel_brake";
+        const VehicleEventType RUNNING_STATUS_LIGHTS_STATUS = "running_status_lights_status";
+        const VehicleEventType RUNNING_STATUS_LIGHTS_STATUS_HEAD = "running_status_lights_status_head";
+        const VehicleEventType RUNNING_STATUS_LIGHTS_STATUS_HIGH_BEAM = "running_status_lights_status_high_beam";
+        const VehicleEventType RUNNING_STATUS_LIGHTS_STATUS_TURN_LEFT = "running_status_lights_status_turn_left";
+        const VehicleEventType RUNNING_STATUS_LIGHTS_STATUS_TURN_RIGHT = "running_status_lights_status_turn_right";
+        const VehicleEventType RUNNING_STATUS_LIGHTS_STATUS_BRAKE = "running_status_lights_status_brake";
+        const VehicleEventType RUNNING_STATUS_LIGHTS_STATUS_FOG_FRONT = "running_status_lights_status_fog_front";
+        const VehicleEventType RUNNING_STATUS_LIGHTS_STATUS_FOG_REAR = "running_status_lights_status_fog_rear";
+        const VehicleEventType RUNNING_STATUS_LIGHTS_STATUS_HAZARD = "running_status_lights_status_hazard";
+        const VehicleEventType RUNNING_STATUS_LIGHTS_STATUS_PARKING = "running_status_lights_status_parking";
+        const VehicleEventType RUNNING_STATUS_INTERIOR_LIGHTS_STATUS = "running_status_interior_lights_status";
+        const VehicleEventType RUNNING_STATUS_INTERIOR_LIGHTS_STATUS_DRIVER = "running_status_interior_lights_status_driver";
+        const VehicleEventType RUNNING_STATUS_INTERIOR_LIGHTS_STATUS_PASSENGER = "running_status_interior_lights_status_passenger";
+        const VehicleEventType RUNNING_STATUS_INTERIOR_LIGHTS_STATUS_CENTER = "running_status_interior_lights_status_center";
+        const VehicleEventType RUNNING_STATUS_AUTOMATIC_HEADLIGHTS = "running_status_automatic_headlights";
+        const VehicleEventType RUNNING_STATUS_DYNAMIC_HIGH_BEAM = "running_status_dynamic_high_beam";
+        const VehicleEventType RUNNING_STATUS_HORN = "running_status_horn";
+        const VehicleEventType RUNNING_STATUS_CHIME = "running_status_chime";
+        const VehicleEventType RUNNING_STATUS_FUEL = "running_status_fuel";
+        const VehicleEventType RUNNING_STATUS_ESTIMATED_RANGE = "running_status_estimated_range";
+        const VehicleEventType RUNNING_STATUS_ENGINE_OIL = "running_status_engine_oil";
+        const VehicleEventType RUNNING_STATUS_ENGINE_OIL_REMAINING = "running_status_engine_oil_remaining";
+        const VehicleEventType RUNNING_STATUS_ENGINE_OIL_CHANGE = "running_status_engine_oil_change";
+        const VehicleEventType RUNNING_STATUS_ENGINE_OIL_TEMP = "running_status_engine_oil_temp";
+        const VehicleEventType RUNNING_STATUS_ENGINE_COOLANT = "running_status_engine_coolant";
+        const VehicleEventType RUNNING_STATUS_ENGINE_COOLANT_LEVEL = "running_status_engine_coolant_level";
+        const VehicleEventType RUNNING_STATUS_ENGINE_COOLANT_TEMP = "running_status_engine_coolant_temp";
+        const VehicleEventType RUNNING_STATUS_STEERING_WHEEL_ANGLE = "running_status_steering_wheel_angle";
+         
+        const unsigned short VEHICLE_POWER_MODE_OFF = 1;
+        const unsigned short VEHICLE_POWER_MODE_ACC = 2;
+        const unsigned short VEHICLE_POWER_MODE_RUN = 3;
+        const unsigned short VEHICLE_POWER_MODE_IGNITION = 4;
+         
+        const unsigned short TRANSMISSION_GEAR_STATUS_NEUTRAL = 0;
+        const unsigned short TRANSMISSION_GEAR_STATUS_MANUAL_1 = 1;
+        const unsigned short TRANSMISSION_GEAR_STATUS_MANUAL_2 = 2;
+        const unsigned short TRANSMISSION_GEAR_STATUS_MANUAL_3 = 3;
+        const unsigned short TRANSMISSION_GEAR_STATUS_MANUAL_4 = 4;
+        const unsigned short TRANSMISSION_GEAR_STATUS_MANUAL_5 = 5;
+        const unsigned short TRANSMISSION_GEAR_STATUS_MANUAL_6 = 6;
+        const unsigned short TRANSMISSION_GEAR_STATUS_MANUAL_7 = 7;
+        const unsigned short TRANSMISSION_GEAR_STATUS_MANUAL_8 = 8;
+        const unsigned short TRANSMISSION_GEAR_STATUS_MANUAL_9 = 9;
+        const unsigned short TRANSMISSION_GEAR_STATUS_MANUAL_10 = 10;
+        const unsigned short TRANSMISSION_GEAR_STATUS_AUTO_1 = 11;
+        const unsigned short TRANSMISSION_GEAR_STATUS_AUTO_2 = 12;
+        const unsigned short TRANSMISSION_GEAR_STATUS_AUTO_3 = 13;
+        const unsigned short TRANSMISSION_GEAR_STATUS_AUTO_4 = 14;
+        const unsigned short TRANSMISSION_GEAR_STATUS_AUTO_5 = 15;
+        const unsigned short TRANSMISSION_GEAR_STATUS_AUTO_6 = 16;
+        const unsigned short TRANSMISSION_GEAR_STATUS_AUTO_7 = 17;
+        const unsigned short TRANSMISSION_GEAR_STATUS_AUTO_8 = 18;
+        const unsigned short TRANSMISSION_GEAR_STATUS_AUTO_9 = 19;
+        const unsigned short TRANSMISSION_GEAR_STATUS_AUTO_10 = 20;
+        const unsigned short TRANSMISSION_GEAR_STATUS_DRIVE = 32;
+        const unsigned short TRANSMISSION_GEAR_STATUS_PARKING = 64;
+        const unsigned short TRANSMISSION_GEAR_STATUS_REVERSE = 128;
+         
+        const unsigned short WHEEL_BRAKE_IDLE = 1;
+        const unsigned short WHEEL_BRAKE_ENGAGED = 2;
+        const unsigned short WHEEL_BRAKE_MALFUNCTION = 3;
+         
+        const unsigned short ENGINE_COOLANT_LEVEL_NORMAL = 0;
+        const unsigned short ENGINE_COOLANT_LEVEL_LOW = 1;
+         
         readonly attribute VehicleEventType type;
         readonly attribute unsigned short? vehiclePowerMode;
         readonly attribute unsigned short speedometer;
@@ -232,34 +235,34 @@ module vehicle {
         readonly attribute short? engineCoolantTemp;
         readonly attribute short? steeringWheelAngle;
     };
- 
+     
     interface MaintenanceEvent : VehicleEvent {
         const VehicleEventType MAINTENANCE = "maintenance";
         const VehicleEventType MAINTENANCE_ODOMETER = "maintenance_odometer";
-        const VehicleEventType MAINTENANCE_TRANSMISSIONOIL = "maintenance_transmissionoil";
-        const VehicleEventType MAINTENANCE_TRANSMISSIONOIL_LIFELEVEL = "maintenance_transmissionoil_lifelevel";
-        const VehicleEventType MAINTENANCE_TRANSMISSIONOIL_TEMP = "maintenance_transmissionoil_temp";
-        const VehicleEventType MAINTENANCE_BRAKEFLUIDLEVEL = "maintenance_brakefluidlevel";
-        const VehicleEventType MAINTENANCE_WASHERFLUIDLEVEL = "maintenance_washerfluidlevel";
-        const VehicleEventType MAINTENANCE_MALFUNCTIONINDICATORLAMP = "maintenance_malfunctionindicatorlamp";
+        const VehicleEventType MAINTENANCE_TRANSMISSION_OIL = "maintenance_transmission_oil";
+        const VehicleEventType MAINTENANCE_TRANSMISSION_OIL_LIFE_LEVEL = "maintenance_transmission_oil_life_level";
+        const VehicleEventType MAINTENANCE_TRANSMISSION_OIL_TEMP = "maintenance_transmission_oil_temp";
+        const VehicleEventType MAINTENANCE_BRAKE_FLUID_LEVEL = "maintenance_brake_fluid_level";
+        const VehicleEventType MAINTENANCE_WASHER_FLUID_LEVEL = "maintenance_washer_fluid_level";
+        const VehicleEventType MAINTENANCE_MALFUNCTION_INDICATOR_LAMP = "maintenance_malfunction_indicator_lamp";
         const VehicleEventType MAINTENANCE_BATTERY = "maintenance_battery";
         const VehicleEventType MAINTENANCE_BATTERY_VOLTAGE = "maintenance_battery_voltage";
         const VehicleEventType MAINTENANCE_BATTERY_CURRENT = "maintenance_battery_current";
-        const VehicleEventType MAINTENANCE_TIREPRESSURE = "maintenance_tirepressure";
-        const VehicleEventType MAINTENANCE_TIREPRESSURE_FRONTLEFT = "maintenance_tirepressure_frontleft";
-        const VehicleEventType MAINTENANCE_TIREPRESSURE_FRONTRIGHT = "maintenance_tirepressure_frontright";
-        const VehicleEventType MAINTENANCE_TIREPRESSURE_REARLEFT = "maintenance_tirepressure_rearleft";
-        const VehicleEventType MAINTENANCE_TIREPRESSURE_REARRIGHT = "maintenance_tirepressure_rearright";
-        const VehicleEventType MAINTENANCE_TIREPRESSURESTATUS = "maintenance_tirepressurestatus";
-        const VehicleEventType MAINTENANCE_TIREPRESSURESTATUS_FRONTLEFT = "maintenance_tirepressurestatus_frontleft";
-        const VehicleEventType MAINTENANCE_TIREPRESSURESTATUS_FRONTRIGHT = "maintenance_tirepressurestatus_frontright";
-        const VehicleEventType MAINTENANCE_TIREPRESSURESTATUS_REARLEFT = "maintenance_tirepressurestatus_rearleft";
-        const VehicleEventType MAINTENANCE_TIREPRESSURESTATUS_REARRIGHT = "maintenance_tirepressurestatus_rearright";
- 
-        const unsigned short TIREPRESSURESTATUS_NORMAL = 0;
-        const unsigned short TIREPRESSURESTATUS_LOW = 1;
-        const unsigned short TIREPRESSURESTATUS_HIGH = 2;
- 
+        const VehicleEventType MAINTENANCE_TIRE_PRESSURE = "maintenance_tire_pressure";
+        const VehicleEventType MAINTENANCE_TIRE_PRESSURE_FRONT_LEFT = "maintenance_tire_pressure_front_left";
+        const VehicleEventType MAINTENANCE_TIRE_PRESSURE_FRONT_RIGHT = "maintenance_tire_pressure_front_right";
+        const VehicleEventType MAINTENANCE_TIRE_PRESSURE_REAR_LEFT = "maintenance_tire_pressure_rear_left";
+        const VehicleEventType MAINTENANCE_TIRE_PRESSURE_REAR_RIGHT = "maintenance_tire_pressure_rear_right";
+        const VehicleEventType MAINTENANCE_TIRE_PRESSURE_STATUS = "maintenance_tire_pressure_status";
+        const VehicleEventType MAINTENANCE_TIRE_PRESSURE_STATUS_FRONT_LEFT = "maintenance_tire_pressure_status_front_left";
+        const VehicleEventType MAINTENANCE_TIRE_PRESSURE_STATUS_FRONT_RIGHT = "maintenance_tire_pressure_status_front_right";
+        const VehicleEventType MAINTENANCE_TIRE_PRESSURE_STATUS_REAR_LEFT = "maintenance_tire_pressure_status_rear_left";
+        const VehicleEventType MAINTENANCE_TIRE_PRESSURE_STATUS_REAR_RIGHT = "maintenance_tire_pressure_status_rear_right";
+         
+        const unsigned short TIRE_PRESSURE_STATUS_NORMAL = 0;
+        const unsigned short TIRE_PRESSURE_STATUS_LOW = 1;
+        const unsigned short TIRE_PRESSURE_STATUS_HIGH = 2;
+     
         readonly attribute VehicleEventType type;
         readonly attribute unsigned long odometer;
         readonly attribute boolean? transmissionOilLifeLevel;
@@ -278,56 +281,56 @@ module vehicle {
         readonly attribute unsigned short? tirePressureStatusRearLeft;
         readonly attribute unsigned short? tirePressureStatusRearRight;
     };
- 
+     
     interface PersonalizationEvent : VehicleEvent {
         const VehicleEventType PERSONALIZATION = "personalization";
-        const VehicleEventType PERSONALIZATION_KEYID = "personalization_keyid";
+        const VehicleEventType PERSONALIZATION_KEY_ID = "personalization_key_id";
         const VehicleEventType PERSONALIZATION_LANGUAGE = "personalization_language";
-        const VehicleEventType PERSONALIZATION_MEASUREMENTSYSTEM = "personalization_measurementsystem";
-        const VehicleEventType PERSONALIZATION_MEASUREMENTSYSTEMSTRING = "personalization_measurementsystemstring";
-        const VehicleEventType PERSONALIZATION_MEASUREMENTSYSTEMSTRING_FUEL = "personalization_measurementsystemstring_fuel";
-        const VehicleEventType PERSONALIZATION_MEASUREMENTSYSTEMSTRING_DISTANCE = "personalization_measurementsystemstring_distance";
-        const VehicleEventType PERSONALIZATION_MEASUREMENTSYSTEMSTRING_SPEED = "personalization_measurementsystemstring_speed";
-        const VehicleEventType PERSONALIZATION_MEASUREMENTSYSTEMSTRING_CONSUMPTION = "personalization_measurementsystemstring_consumption";
+        const VehicleEventType PERSONALIZATION_MEASUREMENT_SYSTEM = "personalization_measurement_system";
+        const VehicleEventType PERSONALIZATION_MEASUREMENT_SYSTEM_STRING = "personalization_measurement_system_string";
+        const VehicleEventType PERSONALIZATION_MEASUREMENT_SYSTEM_STRING_FUEL = "personalization_measurement_system_string_fuel";
+        const VehicleEventType PERSONALIZATION_MEASUREMENT_SYSTEM_STRING_DISTANCE = "personalization_measurement_system_string_distance";
+        const VehicleEventType PERSONALIZATION_MEASUREMENT_SYSTEM_STRING_SPEED = "personalization_measurement_system_string_speed";
+        const VehicleEventType PERSONALIZATION_MEASUREMENT_SYSTEM_STRING_CONSUMPTION = "personalization_measurement_system_string_consumption";
         const VehicleEventType PERSONALIZATION_MIRROR = "personalization_mirror";
         const VehicleEventType PERSONALIZATION_MIRROR_DRIVER = "personalization_mirror_driver";
         const VehicleEventType PERSONALIZATION_MIRROR_PASSENGER = "personalization_mirror_passenger";
         const VehicleEventType PERSONALIZATION_MIRROR_INSIDE = "personalization_mirror_inside";
-        const VehicleEventType PERSONALIZATION_STEERINGWHEELPOSITION = "personalization_steeringwheelposition";
-        const VehicleEventType PERSONALIZATION_STEERINGWHEELPOSITION_SLIDE = "personalization_steeringwheelposition_slide";
-        const VehicleEventType PERSONALIZATION_STEERINGWHEELPOSITION_TILT = "personalization_steeringwheelposition_tilt";
-        const VehicleEventType PERSONALIZATION_DRIVINGMODE = "personalization_drivingmode";
-        const VehicleEventType PERSONALIZATION_DRIVERSEATPOSITION = "personalization_driverseatposition";
-        const VehicleEventType PERSONALIZATION_DRIVERSEATPOSITION_RECLINESEATBACK = "personalization_driverseatposition_reclineseatback";
-        const VehicleEventType PERSONALIZATION_DRIVERSEATPOSITION_SLIDE = "personalization_driverseatposition_slide";
-        const VehicleEventType PERSONALIZATION_DRIVERSEATPOSITION_CUSHIONHEIGHT = "personalization_driverseatposition_cushionheight";
-        const VehicleEventType PERSONALIZATION_DRIVERSEATPOSITION_HEADREST = "personalization_driverseatposition_headrest";
-        const VehicleEventType PERSONALIZATION_DRIVERSEATPOSITION_BACKCUSHION = "personalization_driverseatposition_backcushion";
-        const VehicleEventType PERSONALIZATION_DRIVERSEATPOSITION_SIDECUSHION = "personalization_driverseatposition_sidecushion";
-        const VehicleEventType PERSONALIZATION_PASSENGERSEATPOSITION = "personalization_passengerseatposition";
-        const VehicleEventType PERSONALIZATION_PASSENGERSEATPOSITION_RECLINESEATBACK = "personalization_passengerseatposition_reclineseatback";
-        const VehicleEventType PERSONALIZATION_PASSENGERSEATPOSITION_SLIDE = "personalization_passengerseatposition_slide";
-        const VehicleEventType PERSONALIZATION_PASSENGERSEATPOSITION_CUSHIONHEIGHT = "personalization_passengerseatposition_cushionheight";
-        const VehicleEventType PERSONALIZATION_PASSENGERSEATPOSITION_HEADREST = "personalization_passengerseatposition_headrest";
-        const VehicleEventType PERSONALIZATION_PASSENGERSEATPOSITION_BACKCUSHION = "personalization_passengerseatposition_backcushion";
-        const VehicleEventType PERSONALIZATION_PASSENGERSEATPOSITION_SIDECUSHION = "personalization_passengerseatposition_sidecushion";
-        const VehicleEventType PERSONALIZATION_DASHBOARDILLUMINATION = "personalization_dashboardillumination";
-        const VehicleEventType PERSONALIZATION_GENERATEDVEHICLESOUNDMODE = "personalization_generatedvehiclesoundmode";
- 
+        const VehicleEventType PERSONALIZATION_STEERING_WHEEL_POSITION = "personalization_steering_wheel_position";
+        const VehicleEventType PERSONALIZATION_STEERING_WHEEL_POSITION_SLIDE = "personalization_steering_wheel_position_slide";
+        const VehicleEventType PERSONALIZATION_STEERING_WHEEL_POSITION_TILT = "personalization_steering_wheel_position_tilt";
+        const VehicleEventType PERSONALIZATION_DRIVING_MODE = "personalization_driving_mode";
+        const VehicleEventType PERSONALIZATION_DRIVER_SEAT_POSITION = "personalization_driver_seat_position";
+        const VehicleEventType PERSONALIZATION_DRIVER_SEAT_POSITION_RECLINE_SEATBACK = "personalization_driver_seat_position_recline_seatback";
+        const VehicleEventType PERSONALIZATION_DRIVER_SEAT_POSITION_SLIDE = "personalization_driver_seat_position_slide";
+        const VehicleEventType PERSONALIZATION_DRIVER_SEAT_POSITION_CUSHION_HEIGHT = "personalization_driver_seat_position_cushion_height";
+        const VehicleEventType PERSONALIZATION_DRIVER_SEAT_POSITION_HEADREST = "personalization_driver_seat_position_headrest";
+        const VehicleEventType PERSONALIZATION_DRIVER_SEAT_POSITION_BACK_CUSHION = "personalization_driver_seat_position_back_cushion";
+        const VehicleEventType PERSONALIZATION_DRIVER_SEAT_POSITION_SIDE_CUSHION = "personalization_driver_seat_position_side_cushion";
+        const VehicleEventType PERSONALIZATION_PASSENGER_SEAT_POSITION = "personalization_passenger_seat_position";
+        const VehicleEventType PERSONALIZATION_PASSENGER_SEAT_POSITION_RECLINE_SEATBACK = "personalization_passenger_seat_position_recline_seatback";
+        const VehicleEventType PERSONALIZATION_PASSENGER_SEAT_POSITION_SLIDE = "personalization_passenger_seat_position_slide";
+        const VehicleEventType PERSONALIZATION_PASSENGER_SEAT_POSITION_CUSHION_HEIGHT = "personalization_passenger_seat_position_cushion_height";
+        const VehicleEventType PERSONALIZATION_PASSENGER_SEAT_POSITION_HEADREST = "personalization_passenger_seat_position_headrest";
+        const VehicleEventType PERSONALIZATION_PASSENGER_SEAT_POSITION_BACK_CUSHION = "personalization_passenger_seat_position_back_cushion";
+        const VehicleEventType PERSONALIZATION_PASSENGER_SEAT_POSITION_SIDE_CUSHION = "personalization_passenger_seat_position_side_cushion";
+        const VehicleEventType PERSONALIZATION_DASHBOARD_ILLUMINATION = "personalization_dashboard_illumination";
+        const VehicleEventType PERSONALIZATION_GENERATED_VEHICLE_SOUND_MODE = "personalization_generated_vehicle_sound_mode";
+         
         const unsigned short LANGUAGE_ENGLISH = 1;
         const unsigned short LANGUAGE_SPANISH = 2;
         const unsigned short LANGUAGE_FRENCH = 3;
- 
-        const unsigned short DRIVINGMODE_COMFORT = 1;
-        const unsigned short DRIVINGMODE_AUTO = 2;
-        const unsigned short DRIVINGMODE_SPORT = 3;
-        const unsigned short DRIVINGMODE_ECO = 4;
-        const unsigned short DRIVINGMODE_MANUAL = 5;
- 
-        const unsigned short GENERATEDVEHICLESOUNDMODE_NORMAL = 1;
-        const unsigned short GENERATEDVEHICLESOUNDMODE_QUIET = 2;
-        const unsigned short GENERATEDVEHICLESOUNDMODE_SPORTIVE = 3;
- 
+         
+        const unsigned short DRIVING_MODE_COMFORT = 1;
+        const unsigned short DRIVING_MODE_AUTO = 2;
+        const unsigned short DRIVING_MODE_SPORT = 3;
+        const unsigned short DRIVING_MODE_ECO = 4;
+        const unsigned short DRIVING_MODE_MANUAL = 5;
+         
+        const unsigned short GENERATED_VEHICLE_SOUND_MODE_NORMAL = 1;
+        const unsigned short GENERATED_VEHICLE_SOUND_MODE_QUIET = 2;
+        const unsigned short GENERATED_VEHICLE_SOUND_MODE_SPORTIVE = 3;
+         
         readonly attribute VehicleEventType type;
         readonly attribute DOMString? keyId;
         readonly attribute unsigned short? language;
@@ -357,85 +360,85 @@ module vehicle {
         readonly attribute unsigned short? dashboardIllumination;
         readonly attribute unsigned short? generatedVehicleSoundMode;
     };
- 
+     
     interface DrivingSafetyEvent : VehicleEvent {
-        const VehicleEventType DRIVINGSAFETY = "drivingsafety";
-        const VehicleEventType DRIVINGSAFETY_ANTILOCKBRAKINGSYSTEM = "drivingsafety_antilockbrakingsystem";
-        const VehicleEventType DRIVINGSAFETY_TRACTIONCONTROLSYSTEM = "drivingsafety_tractioncontrolsystem";
-        const VehicleEventType DRIVINGSAFETY_ELECTRONICSTABILITYCONTROL = "drivingsafety_electronicstabilitycontrol";
-        const VehicleEventType DRIVINGSAFETY_VEHICLETOPSPEEDLIMIT = "drivingsafety_vehicletopspeedlimit";
-        const VehicleEventType DRIVINGSAFETY_AIRBAGSTATUS = "drivingsafety_airbagstatus";
-        const VehicleEventType DRIVINGSAFETY_AIRBAGSTATUS_DRIVER = "drivingsafety_airbagstatus_driver";
-        const VehicleEventType DRIVINGSAFETY_AIRBAGSTATUS_PASSENGER = "drivingsafety_airbagstatus_passenger";
-        const VehicleEventType DRIVINGSAFETY_AIRBAGSTATUS_SIDE = "drivingsafety_airbagstatus_side";
-        const VehicleEventType DRIVINGSAFETY_DOOROPENSTATUS = "drivingsafety_dooropenstatus";
-        const VehicleEventType DRIVINGSAFETY_DOOROPENSTATUS_DRIVER = "drivingsafety_dooropenstatus_driver";
-        const VehicleEventType DRIVINGSAFETY_DOOROPENSTATUS_PASSENGER = "drivingsafety_dooropenstatus_passenger";
-        const VehicleEventType DRIVINGSAFETY_DOOROPENSTATUS_REARLEFT = "drivingsafety_dooropenstatus_rearleft";
-        const VehicleEventType DRIVINGSAFETY_DOOROPENSTATUS_REARRIGHT = "drivingsafety_dooropenstatus_rearright";
-        const VehicleEventType DRIVINGSAFETY_DOOROPENSTATUS_TRUNK = "drivingsafety_dooropenstatus_trunk";
-        const VehicleEventType DRIVINGSAFETY_DOOROPENSTATUS_FUELFILTERCAP = "drivingsafety_dooropenstatus_fuelfiltercap";
-        const VehicleEventType DRIVINGSAFETY_DOOROPENSTATUS_HOOD = "drivingsafety_dooropenstatus_hood";
-        const VehicleEventType DRIVINGSAFETY_DOORLOCKSTATUS = "drivingsafety_doorlockstatus";
-        const VehicleEventType DRIVINGSAFETY_DOORLOCKSTATUS_DRIVER = "drivingsafety_doorlockstatus_driver";
-        const VehicleEventType DRIVINGSAFETY_DOORLOCKSTATUS_PASSENGER = "drivingsafety_doorlockstatus_passenger";
-        const VehicleEventType DRIVINGSAFETY_DOORLOCKSTATUS_REARLEFT = "drivingsafety_doorlockstatus_rearleft";
-        const VehicleEventType DRIVINGSAFETY_DOORLOCKSTATUS_REARRIGHT = "drivingsafety_doorlockstatus_rearright";
-        const VehicleEventType DRIVINGSAFETY_CHILDSAFETYLOCK = "drivingsafety_childsafetylock";
-        const VehicleEventType DRIVINGSAFETY_OCCUPANTSSTATUS = "drivingsafety_occupantsstatus";
-        const VehicleEventType DRIVINGSAFETY_OCCUPANTSSTATUS_DRIVER = "drivingsafety_occupantsstatus_driver";
-        const VehicleEventType DRIVINGSAFETY_OCCUPANTSSTATUS_PASSENGER = "drivingsafety_occupantsstatus_passenger";
-        const VehicleEventType DRIVINGSAFETY_OCCUPANTSSTATUS_REARLEFT = "drivingsafety_occupantsstatus_rearleft";
-        const VehicleEventType DRIVINGSAFETY_OCCUPANTSSTATUS_REARRIGHT = "drivingsafety_occupantsstatus_rearright";
-        const VehicleEventType DRIVINGSAFETY_SEATBELT = "drivingsafety_seatbelt";
-        const VehicleEventType DRIVINGSAFETY_SEATBELT_DRIVER = "drivingsafety_seatbelt_driver";
-        const VehicleEventType DRIVINGSAFETY_SEATBELT_PASSENGER = "drivingsafety_seatbelt_passenger";
-        const VehicleEventType DRIVINGSAFETY_SEATBELT_REARLEFT = "drivingsafety_seatbelt_rearleft";
-        const VehicleEventType DRIVINGSAFETY_SEATBELT_REARRIGHT = "drivingsafety_seatbelt_rearright";
-        const VehicleEventType DRIVINGSAFETY_WINDOWLOCK = "drivingsafety_windowlock";
-        const VehicleEventType DRIVINGSAFETY_WINDOWLOCK_DRIVER = "drivingsafety_windowlock_driver";
-        const VehicleEventType DRIVINGSAFETY_WINDOWLOCK_PASSENGER = "drivingsafety_windowlock_passenger";
-        const VehicleEventType DRIVINGSAFETY_WINDOWLOCK_REARLEFT = "drivingsafety_windowlock_rearleft";
-        const VehicleEventType DRIVINGSAFETY_WINDOWLOCK_REARRIGHT = "drivingsafety_windowlock_rearright";
-        const VehicleEventType DRIVINGSAFETY_OBSTACLEDISTANCE = "drivingsafety_obstacledistance";
-        const VehicleEventType DRIVINGSAFETY_OBSTACLEDISTANCE_SENSORSTATUS = "drivingsafety_obstacledistance_sensorstatus";
-        const VehicleEventType DRIVINGSAFETY_OBSTACLEDISTANCE_FRONTCENTER = "drivingsafety_obstacledistance_frontcenter";
-        const VehicleEventType DRIVINGSAFETY_OBSTACLEDISTANCE_REARCENTER = "drivingsafety_obstacledistance_rearcenter";
-        const VehicleEventType DRIVINGSAFETY_OBSTACLEDISTANCE_FRONTLEFT = "drivingsafety_obstacledistance_frontleft";
-        const VehicleEventType DRIVINGSAFETY_OBSTACLEDISTANCE_FRONTRIGHT = "drivingsafety_obstacledistance_frontright";
-        const VehicleEventType DRIVINGSAFETY_OBSTACLEDISTANCE_MIDDLELEFT = "drivingsafety_obstacledistance_middleleft";
-        const VehicleEventType DRIVINGSAFETY_OBSTACLEDISTANCE_MIDDLERIGHT = "drivingsafety_obstacledistance_middleright";
-        const VehicleEventType DRIVINGSAFETY_OBSTACLEDISTANCE_REARLEFT = "drivingsafety_obstacledistance_rearleft";
-        const VehicleEventType DRIVINGSAFETY_OBSTACLEDISTANCE_REARRIGHT = "drivingsafety_obstacledistance_rearright";
-        const VehicleEventType DRIVINGSAFETY_FRONTCOLLISIONDETECTION = "drivingsafety_frontcollisiondetection";
-        const VehicleEventType DRIVINGSAFETY_FRONTCOLLISIONDETECTION_STATUS = "drivingsafety_frontcollisiondetection_status";
-        const VehicleEventType DRIVINGSAFETY_FRONTCOLLISIONDETECTION_DISTANCE = "drivingsafety_frontcollisiondetection_distance";
-        const VehicleEventType DRIVINGSAFETY_FRONTCOLLISIONDETECTION_TIME = "drivingsafety_frontcollisiondetection_time";
- 
-        const unsigned short ANTILOCKBRAKINGSYSTEM_AVAILABLE = 1;
-        const unsigned short ANTILOCKBRAKINGSYSTEM_IDLE = 2;
-        const unsigned short ANTILOCKBRAKINGSYSTEM_ENGAGED = 3;
- 
-        const unsigned short TRACTIONCONTROLSYSTEM_AVAILABLE = 1;
-        const unsigned short TRACTIONCONTROLSYSTEM_IDLE = 2;
-        const unsigned short TRACTIONCONTROLSYSTEM_ENGAGED = 3;
- 
-        const unsigned short ELECTRONICSTABILITYCONTROL_AVAILABLE = 1;
-        const unsigned short ELECTRONICSTABILITYCONTROL_IDLE = 2;
-        const unsigned short ELECTRONICSTABILITYCONTROL_ENGAGED = 3;
- 
-        const unsigned short AIRBAGSTATUS_ACTIVATE = 1;
-        const unsigned short AIRBAGSTATUS_DEACTIVATE = 2;
-        const unsigned short AIRBAGSTATUS_DEPLOYMENT = 3;
- 
-        const unsigned short DOOROPENSTATUS_OPEN = 1;
-        const unsigned short DOOROPENSTATUS_AJAR = 2;
-        const unsigned short DOOROPENSTATUS_CLOSE = 3;
- 
-        const unsigned short OCCUPANTSSTATUS_ADULT = 1;
-        const unsigned short OCCUPANTSSTATUS_CHILD = 2;
-        const unsigned short OCCUPANTSSTATUS_VACANT = 3;
- 
+        const VehicleEventType DRIVING_SAFETY = "driving_safety";
+        const VehicleEventType DRIVING_SAFETY_ANTILOCK_BRAKING_SYSTEM = "driving_safety_antilock_braking_system";
+        const VehicleEventType DRIVING_SAFETY_TRACTION_CONTROL_SYSTEM = "driving_safety_traction_control_system";
+        const VehicleEventType DRIVING_SAFETY_ELECTRONIC_STABILITY_CONTROL = "driving_safety_electronic_stability_control";
+        const VehicleEventType DRIVING_SAFETY_VEHICLE_TOP_SPEED_LIMIT = "driving_safety_vehicle_top_speed_limit";
+        const VehicleEventType DRIVING_SAFETY_AIRBAG_STATUS = "driving_safety_airbag_status";
+        const VehicleEventType DRIVING_SAFETY_AIRBAG_STATUS_DRIVER = "driving_safety_airbag_status_driver";
+        const VehicleEventType DRIVING_SAFETY_AIRBAG_STATUS_PASSENGER = "driving_safety_airbag_status_passenger";
+        const VehicleEventType DRIVING_SAFETY_AIRBAG_STATUS_SIDE = "driving_safety_airbag_status_side";
+        const VehicleEventType DRIVING_SAFETY_DOOR_OPEN_STATUS = "driving_safety_door_open_status";
+        const VehicleEventType DRIVING_SAFETY_DOOR_OPEN_STATUS_DRIVER = "driving_safety_door_open_status_driver";
+        const VehicleEventType DRIVING_SAFETY_DOOR_OPEN_STATUS_PASSENGER = "driving_safety_door_open_status_passenger";
+        const VehicleEventType DRIVING_SAFETY_DOOR_OPEN_STATUS_REAR_LEFT = "driving_safety_door_open_status_rear_left";
+        const VehicleEventType DRIVING_SAFETY_DOOR_OPEN_STATUS_REAR_RIGHT = "driving_safety_door_open_status_rear_right";
+        const VehicleEventType DRIVING_SAFETY_DOOR_OPEN_STATUS_TRUNK = "driving_safety_door_open_status_trunk";
+        const VehicleEventType DRIVING_SAFETY_DOOR_OPEN_STATUS_FUEL_FILTER_CAP = "driving_safety_door_open_status_fuel_filter_cap";
+        const VehicleEventType DRIVING_SAFETY_DOOR_OPEN_STATUS_HOOD = "driving_safety_door_open_status_hood";
+        const VehicleEventType DRIVING_SAFETY_DOOR_LOCK_STATUS = "driving_safety_door_lock_status";
+        const VehicleEventType DRIVING_SAFETY_DOOR_LOCK_STATUS_DRIVER = "driving_safety_door_lock_status_driver";
+        const VehicleEventType DRIVING_SAFETY_DOOR_LOCK_STATUS_PASSENGER = "driving_safety_door_lock_status_passenger";
+        const VehicleEventType DRIVING_SAFETY_DOOR_LOCK_STATUS_REAR_LEFT = "driving_safety_door_lock_status_rear_left";
+        const VehicleEventType DRIVING_SAFETY_DOOR_LOCK_STATUS_REAR_RIGHT = "driving_safety_door_lock_status_rear_right";
+        const VehicleEventType DRIVING_SAFETY_CHILD_SAFETY_LOCK = "driving_safety_child_safety_lock";
+        const VehicleEventType DRIVING_SAFETY_OCCUPANTS_STATUS = "driving_safety_occupants_status";
+        const VehicleEventType DRIVING_SAFETY_OCCUPANTS_STATUS_DRIVER = "driving_safety_occupants_status_driver";
+        const VehicleEventType DRIVING_SAFETY_OCCUPANTS_STATUS_PASSENGER = "driving_safety_occupants_status_passenger";
+        const VehicleEventType DRIVING_SAFETY_OCCUPANTS_STATUS_REAR_LEFT = "driving_safety_occupants_status_rear_left";
+        const VehicleEventType DRIVING_SAFETY_OCCUPANTS_STATUS_REAR_RIGHT = "driving_safety_occupants_status_rear_right";
+        const VehicleEventType DRIVING_SAFETY_SEAT_BELT = "driving_safety_seat_belt";
+        const VehicleEventType DRIVING_SAFETY_SEAT_BELT_DRIVER = "driving_safety_seat_belt_driver";
+        const VehicleEventType DRIVING_SAFETY_SEAT_BELT_PASSENGER = "driving_safety_seat_belt_passenger";
+        const VehicleEventType DRIVING_SAFETY_SEAT_BELT_REAR_LEFT = "driving_safety_seat_belt_rear_left";
+        const VehicleEventType DRIVING_SAFETY_SEAT_BELT_REAR_RIGHT = "driving_safety_seat_belt_rear_right";
+        const VehicleEventType DRIVING_SAFETY_WINDOW_LOCK = "driving_safety_window_lock";
+        const VehicleEventType DRIVING_SAFETY_WINDOW_LOCK_DRIVER = "driving_safety_window_lock_driver";
+        const VehicleEventType DRIVING_SAFETY_WINDOW_LOCK_PASSENGER = "driving_safety_window_lock_passenger";
+        const VehicleEventType DRIVING_SAFETY_WINDOW_LOCK_REAR_LEFT = "driving_safety_window_lock_rear_left";
+        const VehicleEventType DRIVING_SAFETY_WINDOW_LOCK_REAR_RIGHT = "driving_safety_window_lock_rear_right";
+        const VehicleEventType DRIVING_SAFETY_OBSTACLE_DISTANCE = "driving_safety_obstacle_distance";
+        const VehicleEventType DRIVING_SAFETY_OBSTACLE_DISTANCE_SENSOR_STATUS = "driving_safety_obstacle_distance_sensor_status";
+        const VehicleEventType DRIVING_SAFETY_OBSTACLE_DISTANCE_FRONT_CENTER = "driving_safety_obstacle_distance_front_center";
+        const VehicleEventType DRIVING_SAFETY_OBSTACLE_DISTANCE_REAR_CENTER = "driving_safety_obstacle_distance_rear_center";
+        const VehicleEventType DRIVING_SAFETY_OBSTACLE_DISTANCE_FRONT_LEFT = "driving_safety_obstacle_distance_front_left";
+        const VehicleEventType DRIVING_SAFETY_OBSTACLE_DISTANCE_FRONT_RIGHT = "driving_safety_obstacle_distance_front_right";
+        const VehicleEventType DRIVING_SAFETY_OBSTACLE_DISTANCE_MIDDLE_LEFT = "driving_safety_obstacle_distance_middle_left";
+        const VehicleEventType DRIVING_SAFETY_OBSTACLE_DISTANCE_MIDDLE_RIGHT = "driving_safety_obstacle_distance_middle_right";
+        const VehicleEventType DRIVING_SAFETY_OBSTACLE_DISTANCE_REAR_LEFT = "driving_safety_obstacle_distance_rear_left";
+        const VehicleEventType DRIVING_SAFETY_OBSTACLE_DISTANCE_REAR_RIGHT = "driving_safety_obstacle_distance_rear_right";
+        const VehicleEventType DRIVING_SAFETY_FRONT_COLLISION_DETECTION = "driving_safety_front_collision_detection";
+        const VehicleEventType DRIVING_SAFETY_FRONT_COLLISION_DETECTION_STATUS = "driving_safety_front_collision_detection_status";
+        const VehicleEventType DRIVING_SAFETY_FRONT_COLLISION_DETECTION_DISTANCE = "driving_safety_front_collision_detection_distance";
+        const VehicleEventType DRIVING_SAFETY_FRONT_COLLISION_DETECTION_TIME = "driving_safety_front_collision_detection_time";
+     
+        const unsigned short ANTILOCK_BRAKING_SYSTEM_AVAILABLE = 1;
+        const unsigned short ANTILOCK_BRAKING_SYSTEM_IDLE = 2;
+        const unsigned short ANTILOCK_BRAKING_SYSTEM_ENGAGED = 3;
+         
+        const unsigned short TRACTION_CONTROL_SYSTEM_AVAILABLE = 1;
+        const unsigned short TRACTION_CONTROL_SYSTEM_IDLE = 2;
+        const unsigned short TRACTION_CONTROL_SYSTEM_ENGAGED = 3;
+         
+        const unsigned short ELECTRONIC_STABILITY_CONTROL_AVAILABLE = 1;
+        const unsigned short ELECTRONIC_STABILITY_CONTROL_IDLE = 2;
+        const unsigned short ELECTRONIC_STABILITY_CONTROL_ENGAGED = 3;
+         
+        const unsigned short AIRBAG_STATUS_ACTIVATE = 1;
+        const unsigned short AIRBAG_STATUS_DEACTIVATE = 2;
+        const unsigned short AIRBAG_STATUS_DEPLOYMENT = 3;
+     
+        const unsigned short DOOR_OPEN_STATUS_OPEN = 1;
+        const unsigned short DOOR_OPEN_STATUS_AJAR = 2;
+        const unsigned short DOOR_OPEN_STATUS_CLOSE = 3;
+         
+        const unsigned short OCCUPANTS_STATUS_ADULT = 1;
+        const unsigned short OCCUPANTS_STATUS_CHILD = 2;
+        const unsigned short OCCUPANTS_STATUS_VACANT = 3;
+     
         readonly attribute VehicleEventType type;
         readonly attribute unsigned short? antilockBrakingSystem;
         readonly attribute unsigned short? tractionControlSystem;
@@ -481,78 +484,78 @@ module vehicle {
         readonly attribute unsigned long? frontCollisionDetectionDistance;
         readonly attribute unsigned long? frontCollisionDetectionTime;
     };
- 
+     
     interface VisionSystemEvent : VehicleEvent {
-        const VehicleEventType VISIONSYSTEM = "visionsystem";
-        const VehicleEventType VISIONSYSTEM_LANEDEPARTUREDETECTIONSTATUS = "visionsystem_lanedeparturedetectionstatus";
-        const VehicleEventType VISIONSYSTEM_LANEDEPARTED = "visionsystem_lanedeparted";
+        const VehicleEventType VISION_SYSTEM = "vision_system";
+        const VehicleEventType VISION_SYSTEM_LANE_DEPARTURE_DETECTION_STATUS = "vision_system_lane_departure_detection_status";
+        const VehicleEventType VISION_SYSTEM_LANE_DEPARTED = "vision_system_lane_departed";
      
         readonly attribute VehicleEventType type;
         readonly attribute boolean? laneDepartureDetectionStatus;
         readonly attribute boolean? laneDeparted;
     };
- 
+     
     interface ParkingEvent : VehicleEvent {
         const VehicleEventType PARKING = "parking";
-        const VehicleEventType PARKING_SECURITYALERT = "parking_securityalert";
-        const VehicleEventType PARKING_PARKINGBRAKE = "parking_parkingbrake";
-        const VehicleEventType PARKING_PARKINGLIGHTS = "parking_parkinglights";
- 
-        const unsigned short SECURITYALERT_AVAILABLE = 1;
-        const unsigned short SECURITYALERT_IDLE = 2;
-        const unsigned short SECURITYALERT_ACTIVATED = 3;
-        const unsigned short SECURITYALERT_ALARM_DETECTED = 4;
- 
+        const VehicleEventType PARKING_SECURITY_ALERT = "parking_security_alert";
+        const VehicleEventType PARKING_PARKING_BRAKE = "parking_parking_brake";
+        const VehicleEventType PARKING_PARKING_LIGHTS = "parking_parking_lights";
+         
+        const unsigned short SECURITY_ALERT_AVAILABLE = 1;
+        const unsigned short SECURITY_ALERT_IDLE = 2;
+        const unsigned short SECURITY_ALERT_ACTIVATED = 3;
+        const unsigned short SECURITY_ALERT_ALARM_DETECTED = 4;
+     
         readonly attribute VehicleEventType type;
         readonly attribute unsigned short? securityAlert;
         readonly attribute boolean? parkingBrake;
         readonly attribute boolean? parkingLights;
     };
- 
+     
     interface ClimateEnvironmentEvent : VehicleEvent {
-        const VehicleEventType CLIMATEENVIRONMENT = "climateenvironment";
-        const VehicleEventType CLIMATEENVIRONMENT_INTERIORTEMP = "climateenvironment_interiortemp";
-        const VehicleEventType CLIMATEENVIRONMENT_EXTERIORTEMP = "climateenvironment_exteriortemp";
-        const VehicleEventType CLIMATEENVIRONMENT_EXTERIORBRIGHTNESS = "climateenvironment_exteriorbrightness";
-        const VehicleEventType CLIMATEENVIRONMENT_RAINSENSOR = "climateenvironment_rainsensor";
-        const VehicleEventType CLIMATEENVIRONMENT_WINDSHIELDWIPER = "climateenvironment_windshieldwiper";
-        const VehicleEventType CLIMATEENVIRONMENT_REARWIPER = "climateenvironment_rearwiper";
-        const VehicleEventType CLIMATEENVIRONMENT_HVACFAN = "climateenvironment_hvacfan";
-        const VehicleEventType CLIMATEENVIRONMENT_HVACFAN_DIRECTION = "climateenvironment_hvacfan_direction";
-        const VehicleEventType CLIMATEENVIRONMENT_HVACFAN_SPEED = "climateenvironment_hvacfan_speed";
-        const VehicleEventType CLIMATEENVIRONMENT_HVACFAN_TARGETTEMP = "climateenvironment_hvacfan_targettemp";
-        const VehicleEventType CLIMATEENVIRONMENT_AIRCONDITIONING = "climateenvironment_airconditioning";
-        const VehicleEventType CLIMATEENVIRONMENT_AIRRECIRCULATION = "climateenvironment_airrecirculation";
-        const VehicleEventType CLIMATEENVIRONMENT_HEATER = "climateenvironment_heater";
-        const VehicleEventType CLIMATEENVIRONMENT_DEFROST = "climateenvironment_defrost";
-        const VehicleEventType CLIMATEENVIRONMENT_DEFROST_WINDSHIELD = "climateenvironment_defrost_windshield";
-        const VehicleEventType CLIMATEENVIRONMENT_DEFROST_REARWINDOW = "climateenvironment_defrost_rearwindow";
-        const VehicleEventType CLIMATEENVIRONMENT_DEFROST_SIDEMIRRORS = "climateenvironment_defrost_sidemirrors";
-        const VehicleEventType CLIMATEENVIRONMENT_STEERINGWHEELHEATER = "climateenvironment_steeringwheelheater";
-        const VehicleEventType CLIMATEENVIRONMENT_SEATHEATER = "climateenvironment_seatheater";
-        const VehicleEventType CLIMATEENVIRONMENT_SEATCOOLER = "climateenvironment_seatcooler";
-        const VehicleEventType CLIMATEENVIRONMENT_WINDOW = "climateenvironment_window";
-        const VehicleEventType CLIMATEENVIRONMENT_WINDOW_DRIVER = "climateenvironment_window_driver";
-        const VehicleEventType CLIMATEENVIRONMENT_WINDOW_PASSENGER = "climateenvironment_window_passenger";
-        const VehicleEventType CLIMATEENVIRONMENT_WINDOW_REARLEFT = "climateenvironment_window_rearleft";
-        const VehicleEventType CLIMATEENVIRONMENT_WINDOW_REARRIGHT = "climateenvironment_window_rearright";
-        const VehicleEventType CLIMATEENVIRONMENT_SUNROOF = "climateenvironment_sunroof";
-        const VehicleEventType CLIMATEENVIRONMENT_SUNROOF_OPENNESS = "climateenvironment_sunroof_openness";
-        const VehicleEventType CLIMATEENVIRONMENT_SUNROOF_TILT = "climateenvironment_sunroof_tilt";
-        const VehicleEventType CLIMATEENVIRONMENT_CONVERTIBLEROOF = "climateenvironment_convertibleroof";
- 
-        const unsigned short RAINSENSOR_NORAIN = 0;
-        const unsigned short RAINSENSOR_LEVEL1 = 1;
-        const unsigned short RAINSENSOR_LEVEL2 = 2;
-        const unsigned short RAINSENSOR_LEVEL3 = 3;
-        const unsigned short RAINSENSOR_LEVEL4 = 4;
-        const unsigned short RAINSENSOR_LEVEL5 = 5;
-        const unsigned short RAINSENSOR_LEVEL6 = 6;
-        const unsigned short RAINSENSOR_LEVEL7 = 7;
-        const unsigned short RAINSENSOR_LEVEL8 = 8;
-        const unsigned short RAINSENSOR_LEVEL9 = 9;
-        const unsigned short RAINSENSOR_HEAVIESTRAIN = 10;
- 
+        const VehicleEventType CLIMATE_ENVIRONMENT = "climate_environment";
+        const VehicleEventType CLIMATE_ENVIRONMENT_INTERIOR_TEMP = "climate_environment_interior_temp";
+        const VehicleEventType CLIMATE_ENVIRONMENT_EXTERIOR_TEMP = "climate_environment_exterior_temp";
+        const VehicleEventType CLIMATE_ENVIRONMENT_EXTERIOR_BRIGHTNESS = "climate_environment_exterior_brightness";
+        const VehicleEventType CLIMATE_ENVIRONMENT_RAIN_SENSOR = "climate_environment_rain_sensor";
+        const VehicleEventType CLIMATE_ENVIRONMENT_WINDSHIELD_WIPER = "climate_environment_windshield_wiper";
+        const VehicleEventType CLIMATE_ENVIRONMENT_REAR_WIPER = "climate_environment_rear_wiper";
+        const VehicleEventType CLIMATE_ENVIRONMENT_HVAC_FAN = "climate_environment_hvac_fan";
+        const VehicleEventType CLIMATE_ENVIRONMENT_HVAC_FAN_DIRECTION = "climate_environment_hvac_fan_direction";
+        const VehicleEventType CLIMATE_ENVIRONMENT_HVAC_FAN_SPEED = "climate_environment_hvac_fan_speed";
+        const VehicleEventType CLIMATE_ENVIRONMENT_HVAC_FAN_TARGET_TEMP = "climate_environment_hvac_fan_target_temp";
+        const VehicleEventType CLIMATE_ENVIRONMENT_AIR_CONDITIONING = "climate_environment_air_conditioning";
+        const VehicleEventType CLIMATE_ENVIRONMENT_AIR_RECIRCULATION = "climate_environment_air_recirculation";
+        const VehicleEventType CLIMATE_ENVIRONMENT_HEATER = "climate_environment_heater";
+        const VehicleEventType CLIMATE_ENVIRONMENT_DEFROST = "climate_environment_defrost";
+        const VehicleEventType CLIMATE_ENVIRONMENT_DEFROST_WINDSHIELD = "climate_environment_defrost_windshield";
+        const VehicleEventType CLIMATE_ENVIRONMENT_DEFROST_REAR_WINDOW = "climate_environment_defrost_rear_window";
+        const VehicleEventType CLIMATE_ENVIRONMENT_DEFROST_SIDE_MIRRORS = "climate_environment_defrost_side_mirrors";
+        const VehicleEventType CLIMATE_ENVIRONMENT_STEERING_WHEEL_HEATER = "climate_environment_steering_wheel_heater";
+        const VehicleEventType CLIMATE_ENVIRONMENT_SEAT_HEATER = "climate_environment_seat_heater";
+        const VehicleEventType CLIMATE_ENVIRONMENT_SEAT_COOLER = "climate_environment_seat_cooler";
+        const VehicleEventType CLIMATE_ENVIRONMENT_WINDOW = "climate_environment_window";
+        const VehicleEventType CLIMATE_ENVIRONMENT_WINDOW_DRIVER = "climate_environment_window_driver";
+        const VehicleEventType CLIMATE_ENVIRONMENT_WINDOW_PASSENGER = "climate_environment_window_passenger";
+        const VehicleEventType CLIMATE_ENVIRONMENT_WINDOW_REAR_LEFT = "climate_environment_window_rear_left";
+        const VehicleEventType CLIMATE_ENVIRONMENT_WINDOW_REAR_RIGHT = "climate_environment_window_rear_right";
+        const VehicleEventType CLIMATE_ENVIRONMENT_SUNROOF = "climate_environment_sunroof";
+        const VehicleEventType CLIMATE_ENVIRONMENT_SUNROOF_OPENNESS = "climate_environment_sunroof_openness";
+        const VehicleEventType CLIMATE_ENVIRONMENT_SUNROOF_TILT = "climate_environment_sunroof_tilt";
+        const VehicleEventType CLIMATE_ENVIRONMENT_CONVERTIBLE_ROOF = "climate_environment_convertible_roof";
+         
+        const unsigned short RAIN_SENSOR_NO_RAIN = 0;
+        const unsigned short RAIN_SENSOR_LEVEL_1 = 1;
+        const unsigned short RAIN_SENSOR_LEVEL_2 = 2;
+        const unsigned short RAIN_SENSOR_LEVEL_3 = 3;
+        const unsigned short RAIN_SENSOR_LEVEL_4 = 4;
+        const unsigned short RAIN_SENSOR_LEVEL_5 = 5;
+        const unsigned short RAIN_SENSOR_LEVEL_6 = 6;
+        const unsigned short RAIN_SENSOR_LEVEL_7 = 7;
+        const unsigned short RAIN_SENSOR_LEVEL_8 = 8;
+        const unsigned short RAIN_SENSOR_LEVEL_9 = 9;
+        const unsigned short RAIN_SENSOR_HEAVIEST_RAIN = 10;
+         
         const unsigned short WIPER_OFF = 0;
         const unsigned short WIPER_ONCE = 1;
         const unsigned short WIPER_SLOWEST = 2;
@@ -560,12 +563,12 @@ module vehicle {
         const unsigned short WIPER_FAST = 4;
         const unsigned short WIPER_FASTEST = 5;
         const unsigned short WIPER_AUTO = 10;
- 
-        const unsigned short HVACFAN_DIRECTION_FRONTPANEL = 1;
-        const unsigned short HVACFAN_DIRECTION_FLOORDUCT = 2;
-        const unsigned short HVACFAN_DIRECTION_FRONTFLOOR = 3;
-        const unsigned short HVACFAN_DIRECTION_DEFROSTERFLOOR = 4;
- 
+         
+        const unsigned short HVAC_FAN_DIRECTION_FRONT_PANEL = 1;
+        const unsigned short HVAC_FAN_DIRECTION_FLOOR_DUCT = 2;
+        const unsigned short HVAC_FAN_DIRECTION_FRONT_FLOOR = 3;
+        const unsigned short HVAC_FAN_DIRECTION_DEFROSTER_FLOOR = 4;
+     
         readonly attribute VehicleEventType type;
         readonly attribute short? interiorTemp;
         readonly attribute short? exteriorTemp;
@@ -593,4 +596,6 @@ module vehicle {
         readonly attribute unsigned short? sunroofTilt;
         readonly attribute boolean? convertibleRoof;
     };
-}
+};
+
+
