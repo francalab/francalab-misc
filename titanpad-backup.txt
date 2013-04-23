@@ -1,0 +1,77 @@
+
+Franca Lab Work.
+Share any information here:
+
+Use this URL (not HTTP) when cloning so that SSH is used as your protocol:
+git clone git@github.com:francalab/francalab-misc.git
+This gives you write access using the SSH key that exists in the virtual machine.
+
+-----------------------------------------------------------------------------------
+Project: Generate WebIDL from Franca?
+- Define mapping from Franca to WebIDL (and opposite).
+WebIDL Spec: http://www.w3.org/TR/WebIDL/
+Franca Spec: https://code.google.com/a/eclipselabs.org/p/franca/downloads/detail?name=FrancaUserGuide-0.3.0.pdf  (see the later chapters)
+
+Who is working on this?  (put your name here)
+
+* Gianpaolo will be here
+* Gunnar
+
+-----------------------------------------------------------------------------------
+Project: Create WebIDL code generator
+- Get the mapping from Franca to WebIDL
+- Program a code generator from Franca model to WebIDL
+
+Who is working on this?  (put your name here)
+Klaus has an initial implementation of this.
+Klaus, how do we use this one?
+
+-----------------------------------------------------------------------------------
+Project: Translate Vehicle WebIDL to Franca
+Here is the Vehicle API definition from the Korea EG, defined in WebIDL format.
+https://collab.genivi.org/wiki/display/genivi/Web+API+for+Vehicle+Data#WebAPIforVehicleData-6.FullWebIDL
+
+Can this be translated (automatically?) into Franca IDL?
+Klaus has a WebIDL to Franca translator (partial). 
+Let's start with that, then do manual edits.
+
+
+
+Steps:
+- Get mapping from WebIDL to Franca from previous project
+- Program an input translator from WebIDL to Franca model
+      Gunnar: I think an alternative is to do a one-shot translation.  The current definition is not that big.  I can translate it quicker using a text editor and keyboard macros.  Need a good mapping definition first however.
+      
+
+Who is working on this?  (put your name here)
+
+-----------------------------------------------------------------------------------
+Project: Create IPC Common API for C
+Currently the common API is for C++ programs.  Start working on a C-based API
+
+
+-----------------------------------------------------------------------------------
+
+Project: Translate Lifecycle IF defined in EA 2 FRANCA
+Martin Leisener
+Tino Jakowitz
+
+Manfred will show the exporter.
+
+
+-----------------------------------------------------------------------------------
+Project: Extend Franca/D-Bus transformation by configuration options from a deployment model.
+Torsten
+Klaus
+
+-----------------------------------------------------------------------------------
+use Franca Contracts / State Machines on an example Franca interface.
+Manfred
+
+-----------------------------------------------------------------------------------
+
+Project: Create Franca interfaces for design pattern examples (e.g., registration / multiclient)
+
+Klaus
+
+
