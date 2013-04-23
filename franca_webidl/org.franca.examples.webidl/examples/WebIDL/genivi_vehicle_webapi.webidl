@@ -1,5 +1,11 @@
-
-
+//
+// (C) 2013 GENIVI Alliance
+// All Rights Reserved
+// (open source licensing not specified at this time)
+//
+// From 2013-04-23
+// https://collab.genivi.org/wiki/display/genivi/Web+API+for+Vehicle+Data#WebAP
+       
 // dummy definitions for avoiding syntax errors
 interface Event { };
 interface Error { };
