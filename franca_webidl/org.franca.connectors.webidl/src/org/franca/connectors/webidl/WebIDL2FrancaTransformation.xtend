@@ -1,29 +1,24 @@
 package org.franca.connectors.webidl
 
-import org.franca.core.franca.FrancaFactory
-import org.franca.core.franca.FBasicTypeId
-import org.franca.core.franca.FType
-import org.franca.core.franca.FTypeRef
-import org.franca.core.franca.FAnnotationType
-
-import java.util.List
-import org.waml.w3c.webidl.webIDL.IDLDefinitions
-import org.waml.w3c.webidl.webIDL.Module
-import org.franca.core.franca.FModel
-import org.waml.w3c.webidl.webIDL.TypeDef
-import org.waml.w3c.webidl.webIDL.Interface
-import org.waml.w3c.webidl.webIDL.ImplementStatement
-import org.waml.w3c.webidl.webIDL.WebIDLPackage
 import com.google.inject.Inject
+import org.eclipse.emf.ecore.EObject
 import org.franca.core.framework.TransformationLogger
+import org.franca.core.franca.FBasicTypeId
+import org.franca.core.franca.FInterface
+import org.franca.core.franca.FModel
+import org.franca.core.franca.FrancaFactory
+import org.waml.w3c.webidl.webIDL.Attribute
+import org.waml.w3c.webidl.webIDL.Const
+import org.waml.w3c.webidl.webIDL.IDLDefinitions
+import org.waml.w3c.webidl.webIDL.ImplementStatement
+import org.waml.w3c.webidl.webIDL.Interface
+import org.waml.w3c.webidl.webIDL.Module
+import org.waml.w3c.webidl.webIDL.Operation
+import org.waml.w3c.webidl.webIDL.TypeDef
+import org.waml.w3c.webidl.webIDL.TypeRef
+import org.waml.w3c.webidl.webIDL.WebIDLPackage
 
 import static org.franca.core.framework.TransformationIssue.*
-import org.eclipse.emf.ecore.EObject
-import org.waml.w3c.webidl.webIDL.Const
-import org.waml.w3c.webidl.webIDL.Attribute
-import org.waml.w3c.webidl.webIDL.Operation
-import org.franca.core.franca.FInterface
-import org.waml.w3c.webidl.webIDL.TypeRef
 
 class WebIDL2FrancaTransformation {
 
@@ -113,8 +108,8 @@ class WebIDL2FrancaTransformation {
 		val it = FrancaFactory::eINSTANCE.createFAttribute
 		name = src.name
 		type = src.type.transformTypeRef
-		if (src.readonly!=null)
-			readonly = "readonly"
+//		if (src.readonly!=null)
+//			readonly = "readonly"
 		 
 		target.attributes.add(it)
 	} 
