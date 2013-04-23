@@ -1,0 +1,177 @@
+grammar org.waml.w3c.webidl.WebIDL with org.eclipse.xtext.common.Terminals
+generate webIDL "http://www.waml.org/w3c/webidl/WebIDL"
+
+IDLDefinitions:
+	(imports += Import)*
+	(definitions += AbstractDefinitions)*;  
+
+
+Import:
+	"import" importURI=STRING ";";
+	
+
+// Common and type declaration definitions
+TypeDef	:	
+	"typedef" type=TypeRef name=ID";";
+
+TypeRef:
+	PrimitiveTypeRef (isArray?="[]")?|SequenceType(isArray?="[]")?|UserTypeRef(isArray?="[]")?;
+
+UserTypeRef:
+	type=[Types|ScopedName];
+	
+Types:
+	TypeDef|Interface|InterfaceFeature;
+
+PrimitiveTypeRef :
+	(unsigned?="unsigned")? name=("void"|"boolean"|"byte"|"double"|"float"|"short"|"long"|"Object"|"object"|"any"|"octet"|"DOMString")+ (nullable?="?")?;
+			
+SequenceType:
+	"sequence<"type=TypeRef">" (nullable?="?")?;
+
+ScopedName:
+	ID('::'ID)*;
+
+// Extended Attributes 
+Callable:
+	"Callable" target=[Operation|ScopedName];
+	
+Constructor:
+	"Constructor" {Constructor}("("arguments+=Argument(","arguments+=Argument)*")")?;
+	
+NamedConstructor:
+	"NamedConstructor" {Constructor}"=" name=ID ("("(arguments+=Argument(","arguments+=Argument)*)?")")?;
+
+Callback:
+	"Callback" {Callback} | "Callback" "=" functionOnly?="FunctionOnly" | "Callback" "=" propertyOnly ?="PropertyOnly";
+	
+NoInterfaceObject:
+	{NoInterfaceObject} "NoInterfaceObject";
+
+OverrideBuiltins:
+	"OverrideBuiltins";
+	
+PrototypeRoot:
+	{PrototypeRoot} "PrototypeRoot";
+
+PutForwards:
+	"PutForwards" "=" target=[Attribute];
+
+TreatNullAs:
+	{TreatNullAs} "TreatNullAs" "=" "EmptyString";
+	
+TreatUndefinedAs:
+	{TreatUndefinedAs} "TreatUndefinedAs" "=" asEmptyString?="EmptyString" |{TreatUndefinedAs} "TreatUndefinedAs" "=" asNull?="null";
+	
+AllowAny:
+	{AllowAny} "AllowAny";
+	
+Replaceable:
+	{Replaceable} "Replaceable";
+
+Supplemental:
+	{Supplemental} "Supplemental";
+	
+ReplaceableNamedProperties:
+	{ReplaceableNamedProperties} "ReplaceableNamedProperties";
+	
+AbstractDefinitions:
+	Definitions|Module;
+
+//TODO: ValueTypeDef is not part of webidl spec
+Definitions:
+		Interface | Exception | TypeDef | ImplementStatement;
+
+ImplementStatement:
+	source=[Interface|ScopedName] "implements" target=[Interface|ScopedName] ";";
+	
+// Module rules
+Module :	
+	("[" (extendedAttributes += ModuleExtendedAttribute) (","extendedAttributes += ModuleExtendedAttribute)*"]")?		
+	'module' name=ScopedName '{'
+		(definitions += AbstractDefinitions)+
+	'}' ";";
+
+ModuleExtendedAttribute:
+	Prefix|NamespaceObject;
+
+Prefix:
+	"Prefix" "=" value+=ScopedName;
+	
+NamespaceObject:
+	"NamespaceObject" {NamespaceObject};
+	
+// Interface rules
+Interface :
+	("["extendedAttributes+=InterfaceExtendedAttribute (","extendedAttribute+=InterfaceExtendedAttribute)* "]")?	
+	"interface" name=ID ((':' superType+=([Interface|ScopedName])) (',' superType+=([Interface|ScopedName]))*)?
+	('{'
+		(members+=InterfaceMember)*
+	'}')?";";
+
+InterfaceExtendedAttribute:
+	Callback|Constructor|NamedConstructor|NoInterfaceObject|PrototypeRoot|Supplemental|OverrideBuiltins|ReplaceableNamedProperties;
+
+InterfaceMember:
+	Const|InterfaceFeature;
+
+InterfaceFeature:
+	Attribute | Operation;
+
+// Operation rules 
+Operation	:	
+	("[" extendedAttributes+=OperationExtendedAttribute(","extendedAttributes+=OperationExtendedAttribute)* "]")?	
+	(stringifier?="stringifier")? (omittable?="omittable")? (specials+=OperationSpecial)*
+	return=TypeRef (name=ID)? "("
+	(arguments+=Argument (',' arguments+=Argument)*)?  ")" ("raises" "("(raises+=[Exception|ScopedName])(","raises+=[Exception|ScopedName])*")")? ";";
+
+OperationExtendedAttribute:
+	TreatNullAs|TreatUndefinedAs;
+
+OperationSpecial:
+	{OperationSpecialGetter}"getter"|{OperationSpecialSetter}"setter"|{OperationSpecialCreator}"creator"|{OperationSpecialDeleter}"deleter"|{OperationSpecialCaller}"caller";
+
+// Attribute
+Attribute	:	
+	("[" extendedAttributes+=AttributeExtendedAttribute(","extendedAttributes+=AttributeExtendedAttribute)* "]")?		
+	(stringifier?="stringifier")? "readonly"? "attribute" type=TypeRef name=ScopedName 
+		( ("getraises" "("(getRaises+=[Exception|ScopedName])(","getRaises+=[Exception|ScopedName])*")")?
+		  ("setraises" "("(setRaises+=[Exception|ScopedName])(","setRaises+=[Exception|ScopedName])*")")?
+		)";";
+
+AttributeExtendedAttribute:
+	PutForwards|Replaceable|TreatNullAs|TreatUndefinedAs;
+	
+// Exception rules
+Exception	:
+	("[" (extendedAttributes+=ExceptionExtendedAttribute) ("," extendedAttributes+=ExceptionExtendedAttribute)* "]")?
+	"exception" name=ID "{" 
+			(members+=ExceptionMember)* "}" ";";
+
+ExceptionMember	:
+	Const|ExceptionField;
+
+ExceptionField:
+	type=TypeRef name=ID ";";
+	
+ExceptionExtendedAttribute:
+	NoInterfaceObject;
+	
+// Argument rules
+Argument:
+	("[" (extendedAttributes+=ArgumentExtendedAttribute) ("," extendedAttributes+=ArgumentExtendedAttribute)* "]")?
+	(in?="in")? (optional?="optional")? type=TypeRef (ellipsis?="...")?  name=ID;
+	
+
+ArgumentExtendedAttribute:
+	AllowAny|TreatNullAs|TreatUndefinedAs;
+	
+// Const rules
+Const :
+	"const" type=TypeRef name+=ID "=" expr=ConstExpr ";";
+	
+ConstExpr : 
+	{ConstExpr} STRING | {ConstExpr} ("0x")?INT ;
+
+
+	
