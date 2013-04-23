@@ -1,0 +1,72 @@
+import ecore;
+import webIDL;
+
+process(xtext::GeneratedMetamodel this) :
+	ePackage.process()
+;
+
+process(EPackage this) :
+	eClassifiers.process()
+;
+
+process(EClassifier this) :
+	null		
+;
+
+process(EClass this) :
+	if this.name == 'Interface' then
+		this.addOperation(
+			"getOperations",
+			ePackage.getEClassifier("Operation"),
+			-1,
+			'
+	EList<Operation> lResult = new org.eclipse.emf.common.util.BasicEList<Operation>();
+	for(java.util.Iterator<InterfaceMember> ite=this.getMembers().iterator();ite.hasNext();)
+	{
+		InterfaceMember lIm = ite.next();
+		if (lIm instanceof Operation)
+		{
+			lResult.add((Operation)lIm);
+		}
+	}
+	return lResult;')->
+	if this.name == 'Interface' then	
+		addOperation(
+				"getAttributes",
+				ePackage.getEClassifier("Attribute"),
+				-1,
+				'
+	EList<Attribute> lResult = new org.eclipse.emf.common.util.BasicEList<Attribute>();
+	for(java.util.Iterator<InterfaceMember> ite=this.getMembers().iterator();ite.hasNext();)
+	{
+		InterfaceMember lIm = ite.next();
+		if (lIm instanceof Attribute)
+		{
+			lResult.add((Attribute)lIm);
+		}
+	}
+	return lResult;')
+	;
+	
+create ecore::EOperation addOperation(ecore::EClassifier c, 
+									  String strName,
+									  ecore::EClassifier type,
+									  Integer upperBound,
+									  String strBody):
+	setName(strName) ->
+	setEType(type) -> 
+	setUpperBound(upperBound)->
+	addBodyAnnotation(strBody)->
+	((ecore::EClass)c).eOperations.add(this);
+
+
+create ecore::EAnnotation addBodyAnnotation(ecore::EOperation op, String strBody):
+	setSource("http://www.eclipse.org/emf/2002/GenModel") ->
+	this.createBody(strBody) ->
+	op.eAnnotations.add(this);
+
+create ecore::EStringToStringMapEntry createBody(ecore::EAnnotation anno, String strBody):
+	setKey("body") ->
+	setValue(strBody) ->
+	anno.details.add(this);
+

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.waml.w3c.webidl/src-gen"
+    editDirectory="/org.waml.w3c.webidl.edit/src" editorDirectory="/org.waml.w3c.webidl.editor/src"
+    modelPluginID="org.waml.w3c.webidl" forceOverwrite="true" modelName="WebIDL" updateClasspath="false"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" complianceLevel="5.0"
+    copyrightFields="false" editPluginID="org.waml.w3c.webidl.edit" editorPluginID="org.waml.w3c.webidl.editor">
+  <genPackages prefix="WebIDL" basePackage="org.waml.w3c.webidl" disposableProviderFactory="true"
+      ecorePackage="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#/">
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//IDLDefinitions">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//IDLDefinitions/imports"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//IDLDefinitions/definitions"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Import">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Import/importURI"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//TypeDef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//TypeDef/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//TypeDef/name"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//TypeRef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//TypeRef/isArray"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//UserTypeRef">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//UserTypeRef/type"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Types"/>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//PrimitiveTypeRef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//PrimitiveTypeRef/unsigned"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//PrimitiveTypeRef/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//PrimitiveTypeRef/nullable"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//SequenceType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//SequenceType/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//SequenceType/nullable"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Callable">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Callable/target"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Constructor">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Constructor/arguments"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Constructor/name"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//NamedConstructor"/>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Callback">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Callback/functionOnly"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Callback/propertyOnly"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//NoInterfaceObject"/>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//PrototypeRoot"/>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//PutForwards">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//PutForwards/target"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//TreatNullAs"/>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//TreatUndefinedAs">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//TreatUndefinedAs/asEmptyString"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//TreatUndefinedAs/asNull"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//AllowAny"/>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Replaceable"/>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Supplemental"/>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//ReplaceableNamedProperties"/>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//AbstractDefinitions"/>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Definitions"/>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//ImplementStatement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//ImplementStatement/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//ImplementStatement/target"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Module">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Module/extendedAttributes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Module/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Module/definitions"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//ModuleExtendedAttribute"/>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Prefix">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Prefix/value"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//NamespaceObject"/>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Interface">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Interface/extendedAttributes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Interface/extendedAttribute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Interface/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Interface/superType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Interface/members"/>
+      <genOperations ecoreOperation="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Interface/getOperations"/>
+      <genOperations ecoreOperation="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Interface/getAttributes"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//InterfaceExtendedAttribute"/>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//InterfaceMember"/>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//InterfaceFeature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//InterfaceFeature/stringifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//InterfaceFeature/name"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Operation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Operation/extendedAttributes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Operation/omittable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Operation/specials"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Operation/return"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Operation/arguments"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Operation/raises"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//OperationExtendedAttribute"/>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//OperationSpecial"/>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Attribute">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Attribute/extendedAttributes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Attribute/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Attribute/getRaises"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Attribute/setRaises"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//AttributeExtendedAttribute"/>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Exception">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Exception/extendedAttributes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Exception/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Exception/members"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//ExceptionMember">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//ExceptionMember/type"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//ExceptionField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//ExceptionField/name"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//ExceptionExtendedAttribute"/>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Argument">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Argument/extendedAttributes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Argument/in"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Argument/optional"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Argument/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Argument/ellipsis"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Argument/name"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//ArgumentExtendedAttribute"/>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Const">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Const/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//Const/expr"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//ConstExpr"/>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//OperationSpecialGetter"/>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//OperationSpecialSetter"/>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//OperationSpecialCreator"/>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//OperationSpecialDeleter"/>
+    <genClasses ecoreClass="platform:/resource/org.waml.w3c.webidl/src-gen/org/waml/w3c/webidl/WebIDL.ecore#//OperationSpecialCaller"/>
+  </genPackages>
+</genmodel:GenModel>
